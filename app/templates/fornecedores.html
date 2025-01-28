@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornecedores</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-success" >
+        <a class="navbar-brand" href="/">Farmácia</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav">
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/medicamentos/">Medicamentos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/clientes/">Clientes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/vendas/">Vendas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/fornecedores/">Fornecedores</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/pedidos/">Pedidos</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/receitas/">Receitas Médicas</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link text-light" href="/relatorios/">Relatórios</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <div class="container mt-5">
+        <h1 class="text-center">Lista de Fornecedores</h1>
+        <table class="table table-striped mt-4">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Nome</th>
+                    <th scope="col">CNPJ</th>
+                    <th scope="col">Contato</th>
+                    <th scope="col">Email</th>
+                    <th scope="col">Endereço</th>
+                    <th scope="col">Ações</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Exemplo de fornecedor -->
+                <tr>
+                    <th scope="row">1</th>
+                    <td>Fornecedor A</td>
+                    <td>12345678000123</td>
+                    <td>(11) 98765-4321</td>
+                    <td>contato@fornecedora.com</td>
+                    <td>Rua Exemplo, 123</td>
+                    <td>
+                        <a href="#" class="btn btn-primary btn-sm">Editar</a>
+                        <a href="#" class="btn btn-danger btn-sm">Excluir</a>
+                    </td>
+                </tr>
+                <!-- Os dados reais virão dinamicamente do backend -->
+            </tbody>
+        </table>
+        <a href="#" class="btn btn-success">Adicionar Novo Fornecedor</a>
+    </div>
+</body>
+</html>
