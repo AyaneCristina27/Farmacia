@@ -59,26 +59,27 @@
             </thead>
             <tbody>
                 <!-- Exemplo de receita médica -->
+                {% for receita in receitas %}
                 <tr>
                     <th scope="row">1</th>
-                    <td>Maria Souza</td>
-                    <td>Dr. João Batista</td>
-                    <td>2025-01-28</td>
+                    <td>{{receita.cliente.nome }}</td>
+                    <td>{{receita.medico}}</td>
+                    <td>{{receita.data_emissao}}</td>
                     <td>
-                        <ul>
-                            <li>Paracetamol (2x ao dia)</li>
-                            <li>Ibuprofeno (1x ao dia)</li>
-                        </ul>
+                        {% for medicamento in receita.medicamentos.all %}
+                        <p>{{ medicamento.nome }}</p>
+                        {% endfor %}
                     </td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                        <a href="#" class="btn btn-primary btn-sm">Editar</a>
                         <a href="#" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
                 </tr>
+                {% endfor %}
                 <!-- Os dados reais virão dinamicamente do backend -->
             </tbody>
         </table>
-        <a href="#" class="btn btn-success">Cadastrar Nova Receita</a>
+        <a href="http://127.0.0.1:8000/admin/app/receitamedica/add/" class="btn btn-success">Cadastrar Nova Receita</a>
     </div>
 </body>
 </html>

@@ -41,6 +41,7 @@ class PedidoReposicaoView(View):
 class ReceitaMedicaView(View):
     def get(self, request, *args, **kwargs):
         receitas = ReceitaMedica.objects.all()
+        print(dir(receitas))
         return render(request, 'receitas.html', {'receitas': receitas})
 
 

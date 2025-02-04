@@ -59,23 +59,24 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Exemplo de pedido -->
+                {% for pedido in pedidos %}
                 <tr>
                     <th scope="row">1</th>
-                    <td>Farmacêutica XYZ</td>
-                    <td>Paracetamol</td>
-                    <td>500</td>
-                    <td>2025-01-28</td>
-                    <td><span class="badge badge-warning">Pendente</span></td>
+                    <td>{{pedido.fornecedor.nome }}</td>
+                    <td>{{pedido.medicamento.nome}}</td>
+                    <td>{{pedido.quantidade}}</td>
+                    <td>{{pedido.data_pedido}}</td>
+                    <td>{{pedido.status}}</td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                        <a href="#" class="btn btn-primary btn-sm">Editar</a>
                         <a href="#" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
                 </tr>
+                {% endfor %}
                 <!-- Os dados reais virão dinamicamente do backend -->
             </tbody>
         </table>
-        <a href="#" class="btn btn-success">Registrar Novo Pedido</a>
+        <a href="http://127.0.0.1:8000/admin/app/pedidoreposicao/add/" class="btn btn-success">Registrar Novo Pedido</a>
     </div>
 </body>
 </html>

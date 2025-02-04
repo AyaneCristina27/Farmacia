@@ -58,20 +58,23 @@
             </thead>
             <tbody>
                 <!-- Exemplo de relatório -->
+                {% for relatorio in relatorios %}
                 <tr>
                     <th scope="row">1</th>
-                    <td>Vendas</td>
-                    <td>2025-01-28</td>
-                    <td>Relatório detalhado das vendas do mês</td>
+                    <td>{{relatorio.tipo }}</td>
+                    <td>{{relatorio.medico}}</td>
+                    <td>{{relatorio.data_geracao}}</td>
+                    <td>{{relatorio.conteudo}}</td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">Visualizar</a>
+                        <a href="#" class="btn btn-primary btn-sm">Editar</a>
                         <a href="#" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
                 </tr>
+                {% endfor %}
                 <!-- Os dados reais virão dinamicamente do backend -->
             </tbody>
         </table>
-        <a href="#" class="btn btn-success">Gerar Novo Relatório</a>
+        <a href="http://127.0.0.1:8000/admin/app/relatorio/add/" class="btn btn-success">Gerar Novo Relatório</a>
     </div>
 </body>
 </html>

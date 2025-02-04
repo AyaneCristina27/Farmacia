@@ -71,7 +71,7 @@ class PedidoReposicao(models.Model):
 class ReceitaMedica(models.Model):
     cliente = models.ForeignKey(Cliente, on_delete=models.CASCADE)
     medico = models.CharField(max_length=200)
-    data_emissao = models.DateField(auto_now_add=True)
+    data_emissao = models.DateField()
     medicamentos = models.ManyToManyField(Medicamento, through='MedicamentoReceita')
 
     def __str__(self):

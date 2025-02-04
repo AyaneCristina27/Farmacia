@@ -60,22 +60,24 @@
             </thead>
             <tbody>
                 <!-- Exemplo de medicamento -->
+                {% for medicamento in medicamentos %}
                 <tr>
                     <th scope="row">1</th>
-                    <td>Paracetamol</td>
-                    <td>FarmacoXYZ</td>
-                    <td>2025-12-31</td>
-                    <td>19,90</td>
-                    <td>50</td>
+                    <td>{{medicamento.nome }}</td>
+                    <td>{{medicamento.fabricante}}</td>
+                    <td>{{medicamento.validade}}</td>
+                    <td>{{medicamento.preco}}</td>
+                    <td>{{medicamento.quantidade_estoque}}</td>
                     <td>
                         <a href="#" class="btn btn-primary btn-sm">Editar</a>
                         <a href="#" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
                 </tr>
+                {% endfor %}
                 <!-- Os dados reais virão dinamicamente do backend -->
             </tbody>
         </table>
-        <a href="#" class="btn btn-success">Adicionar Novo Medicamento</a>
+        <a href="http://127.0.0.1:8000/admin/app/medicamento/add/" class="btn btn-success">Adicionar Novo Medicamento</a>
     </div>
 </body>
 </html>

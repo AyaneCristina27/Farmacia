@@ -58,20 +58,22 @@
             </thead>
             <tbody>
                 <!-- Exemplo de venda -->
+                {% for venda in vendas %}
                 <tr>
                     <th scope="row">1</th>
-                    <td>João da Silva</td>
-                    <td>2025-01-28</td>
-                    <td>R$ 150,00</td>
+                    <td>{{venda.cliente }}</td>
+                    <td>{{venda.data}}</td>
+                    <td>{{venda.total}}</td>
                     <td>
-                        <a href="#" class="btn btn-primary btn-sm">Detalhes</a>
+                        <a href="#" class="btn btn-primary btn-sm">Editar</a>
                         <a href="#" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
                 </tr>
+                {% endfor %}
                 <!-- Os dados reais virão dinamicamente do backend -->
             </tbody>
         </table>
-        <a href="#" class="btn btn-success">Registrar Nova Venda</a>
+        <a href="http://127.0.0.1:8000/admin/app/venda/add/" class="btn btn-success">Registrar Nova Venda</a>
     </div>
 </body>
 </html>

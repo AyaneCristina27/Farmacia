@@ -59,23 +59,23 @@
                 </tr>
             </thead>
             <tbody>
-                <!-- Exemplo de fornecedor -->
+                {% for fornecedor in fornecedores %}
                 <tr>
                     <th scope="row">1</th>
-                    <td>Fornecedor A</td>
-                    <td>12345678000123</td>
-                    <td>(11) 98765-4321</td>
-                    <td>contato@fornecedora.com</td>
-                    <td>Rua Exemplo, 123</td>
+                    <td>{{ fornecedor.nome }}</td>
+                    <td>{{fornecedor.cnpj}}</td>
+                    <td>{{fornecedor.contato}}</td>
+                    <td>{{fornecedor.email}}</td>
+                    <td>{{fornecedor.endereco}}</td>
                     <td>
                         <a href="#" class="btn btn-primary btn-sm">Editar</a>
                         <a href="#" class="btn btn-danger btn-sm">Excluir</a>
                     </td>
                 </tr>
-                <!-- Os dados reais virão dinamicamente do backend -->
+                {% endfor %}
             </tbody>
         </table>
-        <a href="#" class="btn btn-success">Adicionar Novo Fornecedor</a>
+        <a href="http://127.0.0.1:8000/admin/app/fornecedor/add/" class="btn btn-success">Adicionar Novo Fornecedor</a>
     </div>
 </body>
 </html>
